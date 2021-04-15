@@ -3,26 +3,26 @@
 h1 {
     font-family: 'Raleway', sans-serif;
     font-weight: 600;
-    color: white;
+    color: #f48c06;
 }
 
 html, body {margin: 0; height: 100%; overflow: hidden}
 
 body {
-    background-color: black;
+    background-color: #03071e;
 }
 
 p {
     font-family: 'Raleway', sans-serif;
     font-weight: 300;
-    color: white;
+    color: #f48c06;
 }
 
 a {
     font-family: 'Raleway', sans-serif;
     font-weight: 600;
     font-size: 1.25rem;
-    color: #ff4532;
+    color: #d00000;
     text-decoration: none;
     text-transform: lowercase;
 }
@@ -33,6 +33,10 @@ a::before {
 
 a::after {
     content: "]";
+}
+
+a:hover {
+    color: #9d0208;
 }
 
 ul {
@@ -47,12 +51,12 @@ li {
 }
 
 #content {
-    background-color: #282828;
+    background-color: #370617;
     height: fit-content;
     width: fit-content;
     max-width: 50%;
     border-radius: 0.25rem;
-    border: 0.125rem solid #ff4532;
+    border: 0.125rem solid #dc2f02;
     margin: 0 auto;
     transform: translateY(25%);
     text-align: center;
@@ -69,5 +73,5 @@ li {
 
 #profpic {
     border-radius: 100px;
-    border: 0.125rem solid #ff4532;
+    border: 0.125rem solid #dc2f02;
 }
