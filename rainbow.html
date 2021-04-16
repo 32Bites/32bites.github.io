@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <canvas
+      style="border: 1px solid black;"
+      width="100px"
+      height="100px"
+      id="canvas"
+    ></canvas>
+    <script>
+      function Color(r, g, b) {
+        return (
+          "rgb(" +
+          (r >>> 0).toString(10) +
+          "," +
+          (g >>> 0).toString(10) +
+          "," +
+          (b >>> 0).toString(10) +
+          ")"
+        );
+      }
+
+      var canvas = document.getElementById("canvas");
+
+      var i = 0;
+      setInterval(function () {
+        for (var x = 0; x < 100; x++) {
+          var rF = 0.01;
+          var gF = 0.01;
+          var bF = 0.01;
+          for (var y = 0; y < 100; y++) {
+            var r = Math.sin(rF * (x - i) + 0) * 127 + 128;
+            var g = Math.sin(gF * (x - i) + 2) * 127 + 128;
+            var b = Math.sin(bF * (x - i) + 4) * 127 + 128;
+            var ctx = canvas.getContext("2d");
+            ctx.beginPath();
+            ctx.strokeStyle = Color(r, g, b);
+            ctx.rect(x, y, 1, 1);
+            ctx.stroke();
+
+            console.log(Color(r, g, b));
+          }
+        }
+        i += 15;
+      }, 5);
+    </script>
+  </body>
+</html>
